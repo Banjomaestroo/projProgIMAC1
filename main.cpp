@@ -1,5 +1,10 @@
 #include <iostream>
 #include <string>
+#include "Player.h"
+#include "Pokimac.h"
+#include "InventoryObject.h"
+#include "Menu.h"
+
 using namespace std;
 
 void play();
@@ -15,24 +20,6 @@ typedef struct Map{
     int tableaux[20][50];
 
 } Map;
-
-typedef struct Pokimac
-{
-    string species;
-    string img;
-    int healthPoint;
-    int strength;
-    int defense;
-}Pokimac;
-
-typedef struct Player
-{
-    string name;
-    Pokimac pokemonTeam[10];
-}Player;
-
-
-
 
 int main() {
 
