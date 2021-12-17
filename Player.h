@@ -13,16 +13,19 @@ class Player {
     int pokeTeamPos = 0;
     int xCoordinate;
     int yCoordinate;
-    InventoryObject Inventory[10];
+    int inventoryPos = 0;
+    InventoryObject inventory[10];
 
-    void capturePokimac(Pokimac toCapture);
+    bool capturePokimac(Pokimac toCapture);
+    void addPokimac(Pokimac toAdd);
     void moveRight();
     void moveLeft();
     void moveUp();
     void moveDown();
-    void askToCome(Pokimac toCome);
+    bool askToCome(Pokimac toCome);
     void battle(Pokimac toBattle);
     void addObject(InventoryObject toAdd);
-    void addPokimac(Pokimac toAdd);
+    Pokimac getPokimac(string name);
+    void displayPokimacs();
 
 };

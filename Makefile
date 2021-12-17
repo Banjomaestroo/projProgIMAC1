@@ -21,10 +21,10 @@ moncode: moncode.o mesfonctions.o
 	$(CC) -o $@ $^
 	
 
-moncode.o: main.cpp InventoryObject.h Menu.h Player.h Pokimac.h Carte.h Case.h PokimacDealer.h
+moncode.o: main.cpp InventoryObject.h Menu.h Player.h Pokimac.h Carte.h Tile.h PokimacDealer.h
 	$(CC) -o $@ -c $< $(CFLAGS)
 
-mesfonctions.o: InventoryObject.h InventoryObject.cpp Menu.h Menu.cpp Player.h Player.cpp Pokimac.h Pokimac.cpp Carte.h Carte.cpp Case.h Case.cpp PokimacDealer.h PokimacDealer.cpp
+mesfonctions.o: InventoryObject.h InventoryObject.cpp Menu.h Menu.cpp Player.h Player.cpp Pokimac.h Pokimac.cpp Carte.h Carte.cpp Tile.h Tile.cpp PokimacDealer.h PokimacDealer.cpp
 	$(CC) -o $@ -c $< $(CFLAGS)
 
 clean:

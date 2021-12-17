@@ -8,12 +8,15 @@ class Pokimac {
     
     string species;
     string img;
+    string name;
+    int maxHealth;
     int healthPoint;
     int strength;
     int defense;
     int xCoordinate;
     int yCoordinate;
     int percentageToCome;
+    bool isDead = false;
 
     void removeHealthPoints(int toRemove);
     bool isCaptured();

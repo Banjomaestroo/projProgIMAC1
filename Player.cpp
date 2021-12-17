@@ -1,8 +1,18 @@
 #include <Player.h>
 
-void Player :: capturePokimac(Pokimac toCapture){
+bool Player :: capturePokimac(Pokimac toCapture){
 
-    pokemonTeam[pokeTeamPos] = toCapture;
+    if(toCapture.isCaptured()){
+        addPokimac(toCapture);
+        return true;
+    }else{
+        return false;
+    }
+}
+
+void Player :: addPokimac(Pokimac toAdd){
+
+    pokemonTeam[pokeTeamPos] = toAdd;
     pokeTeamPos++;
 
 }
@@ -31,9 +41,15 @@ void Player :: moveDown(){
 
 }
 
-void Player :: askToCome(Pokimac toCome){
+bool Player :: askToCome(Pokimac toCome){
 
-    
+    int comes = rand() %101;
+    if(toCome.percentageToCome<=comes){
+        addPokimac(toCome);
+        return true;
+    }else{
+        return false;
+    }
 
 }
 
@@ -45,6 +61,21 @@ void Player :: addObject(InventoryObject toAdd){
 
 }
 
-void Player :: addPokimac(Pokimac toAdd){
+void Player :: displayPokimacs(){
 
+    for(Pokimac &poki : pokemonTeam){
+       poki.displayCaracteristics();     
+    }
+
+}
+
+Pokimac Player :: getPokimac(string name){
+
+    for(Pokimac &poki : pokemonTeam){
+            if(poki.name == name){
+                return poki;
+            }
+        }
+
+    cout << "no Pokimac found";
 }
