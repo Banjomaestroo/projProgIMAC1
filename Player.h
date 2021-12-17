@@ -14,7 +14,6 @@ class Player {
     int yCoordinate;
     InventoryObject Inventory[10];
 
-    void addPokimac(Pokimac toAdd);
     void capturePokimac(Pokimac toCapture);
     void moveRight();
     void moveLeft();

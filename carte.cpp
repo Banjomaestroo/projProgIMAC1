@@ -1,9 +1,9 @@
-#include <iostream>
-#include<string>
-class MyClass {       // The class
-  public:
-    int tableau[20][50];             // Access specifier
-    int myNum;        // Attribute (int variable)
-    
-};    
+#include "Carte.h"
 
+Tile Carte :: getCase(int x, int y){
+
+}
+
+void Carte :: generateCases(){
+  
+}

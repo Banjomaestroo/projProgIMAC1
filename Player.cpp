@@ -1,9 +1,5 @@
 #include <Player.h>
 
-void Player::addPokimac(Pokimac toAdd){
-    
-}
-
 void Player :: capturePokimac(Pokimac toCapture){
 
 }

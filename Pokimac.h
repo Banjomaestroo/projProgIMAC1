@@ -19,5 +19,4 @@ class Pokimac {
     int attack();
     void feed();
     void displayCaracteristics();
-
-};
+}

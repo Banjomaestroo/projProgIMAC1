@@ -1,8 +1,6 @@
 #include <iostream>
 #include <string>
 #include "Player.h"
-#include "Pokimac.h"
-#include "InventoryObject.h"
 #include "Menu.h"
 
 using namespace std;
@@ -10,16 +8,28 @@ using namespace std;
 void play();
 bool correctInput(string input);
 void displayMapLimit(string direction);
+void initialize();
+void createPokimacs();
 
 const int maxX = 20;
 const int maxY = 50;
 int x;
 int y;
+Player thePlayer;
 
 typedef struct Map{
     int tableaux[20][50];
 
 } Map;
+
+void initialize(){
+
+    cout << "Choose your username" << endl ;
+    cin >> thePlayer.name;
+
+
+
+}
 
 int main() {
 

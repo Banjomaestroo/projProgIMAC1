@@ -21,10 +21,10 @@ moncode: moncode.o mesfonctions.o
 	$(CC) -o $@ $^
 	
 
-moncode.o: main.cpp InventoryObject.h Menu.h Player.h Pokimac.h
+moncode.o: main.cpp InventoryObject.h Menu.h Player.h Pokimac.h Carte.h Case.h PokimacDealer.h
 	$(CC) -o $@ -c $< $(CFLAGS)
 
-mesfonctions.o: InventoryObject.h InventoryObject.cpp Menu.h Menu.cpp Player.h Player.cpp Pokimac.h Pokimac.cpp
+mesfonctions.o: InventoryObject.h InventoryObject.cpp Menu.h Menu.cpp Player.h Player.cpp Pokimac.h Pokimac.cpp Carte.h Carte.cpp Case.h Case.cpp PokimacDealer.h PokimacDealer.cpp
 	$(CC) -o $@ -c $< $(CFLAGS)
 
 clean:
@@ -36,3 +36,5 @@ clean:
 # regles peuvent etre omises, car définies implicitement.
 #
 # Si vous voulez en connaitre plus, pour l'instant, cherchez en ligne.
+#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
+#git push https://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@github.com/Banjomaestroo/projProgIMAC1.git
