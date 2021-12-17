@@ -13,5 +13,6 @@ class Carte {
 
     Tile getCase(int x, int y);
     void generateCases();
+    void displayCarte();
 
 };

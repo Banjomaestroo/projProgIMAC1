@@ -10,6 +10,7 @@ class Player {
     
     string name;
     Pokimac pokemonTeam[10];
+    int pokeTeamPos = 0;
     int xCoordinate;
     int yCoordinate;
     InventoryObject Inventory[10];

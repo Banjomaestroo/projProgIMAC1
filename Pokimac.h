@@ -13,10 +13,11 @@ class Pokimac {
     int defense;
     int xCoordinate;
     int yCoordinate;
+    int percentageToCome;
 
     void removeHealthPoints(int toRemove);
     bool isCaptured();
     int attack();
     void feed();
-    void displayCaracteristics();
-}
+    void displayCaracteristics(); //
+};
