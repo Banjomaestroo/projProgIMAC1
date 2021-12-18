@@ -1,5 +1,9 @@
 #include <Player.h>
 
+Player :: Player(string name2){
+    name = name2;
+}
+
 bool Player :: capturePokimac(Pokimac toCapture){
 
     if(toCapture.isCaptured()){
@@ -12,8 +16,7 @@ bool Player :: capturePokimac(Pokimac toCapture){
 
 void Player :: addPokimac(Pokimac toAdd){
 
-    pokemonTeam[pokeTeamPos] = toAdd;
-    pokeTeamPos++;
+    pokemonTeam.push_back(toAdd);
 
 }
 
@@ -59,23 +62,52 @@ void Player :: battle(Pokimac toBattle){
 
 void Player :: addObject(InventoryObject toAdd){
 
+    inventory.push_back(toAdd);
+
 }
 
 void Player :: displayPokimacs(){
 
-    for(Pokimac &poki : pokemonTeam){
-       poki.displayCaracteristics();     
+    for(vector<Pokimac>::iterator it = pokemonTeam.begin(); it != pokemonTeam.end(); ++it) {
+        (*it).displayCaracteristics();
     }
-
 }
 
 Pokimac Player :: getPokimac(string name){
 
-    for(Pokimac &poki : pokemonTeam){
-            if(poki.name == name){
-                return poki;
+    for(vector<Pokimac>::iterator it = pokemonTeam.begin(); it != pokemonTeam.end(); ++it) {
+    
+            if((*it).name == name){
+                return *it;
             }
         }
 
     cout << "no Pokimac found";
+}
+
+void Player :: removePokimac(string name){
+
+        for(vector<Pokimac>::iterator it = pokemonTeam.begin(); it != pokemonTeam.end(); ++it) {
+    
+            if((*it).name == name){
+                pokemonTeam.erase(it);
+            }
+        }
+}
+
+void Player :: removeObject(string name){
+    for(vector<InventoryObject>::iterator it = inventory.begin(); it != inventory.end(); ++it) {
+    
+            if((*it).name == name){
+                inventory.erase(it);
+            }
+        }
+}
+
+void Player :: displayInventory(){
+
+    for(vector<InventoryObject>::iterator it = inventory.begin(); it != inventory.end(); ++it) {
+        (*it).displayCharacteristics();
+    }
+
 }

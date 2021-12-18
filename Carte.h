@@ -9,10 +9,10 @@ class Carte {
   public:           
     
     Pokimac pokimac;
-    Tile cases[50];
+    Tile tiles[50];
 
     Tile getCase(int x, int y);
-    void generateCases();
+    void generateTiles();
     void displayCarte();
 
 };

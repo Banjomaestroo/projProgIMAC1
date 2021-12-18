@@ -4,7 +4,7 @@ Tile Carte :: getCase(int x, int y){
 
 }
 
-void Carte :: generateCases(){
+void Carte :: generateTiles(){
   
 }
 
