@@ -13,16 +13,16 @@
 
 
 CC=g++
-CFLAGS=-Wall -ansi
+CFLAGS=-Wall -ansi 
 
 
 
 moncode: moncode.o mesfonctions.o
-	$(CC) -o $@ $^
+	$(CC) -o $@ $^ -I include -L lib -l SDL2-2.0.0
 	
 
 moncode.o: main.cpp InventoryObject.h Menu.h Player.h Pokimac.h Carte.h Tile.h PokimacDealer.h
-	$(CC) -o $@ -c $< $(CFLAGS)
+	$(CC) -o $@ -c $< $(CFLAGS) -I include -L lib -l SDL2-2.0.0
 
 mesfonctions.o: InventoryObject.h InventoryObject.cpp Menu.h Menu.cpp Player.h Player.cpp Pokimac.h Pokimac.cpp Carte.h Carte.cpp Tile.h Tile.cpp PokimacDealer.h PokimacDealer.cpp
 	$(CC) -o $@ -c $< $(CFLAGS)

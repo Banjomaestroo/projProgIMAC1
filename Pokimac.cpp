@@ -1,18 +1,22 @@
 #include <Pokimac.h>
 
-Pokimac :: Pokimac(string species2, string img2, string name2, string description2, int maxHealth2, int healthPoint2, int strength2, int defense2, int percentageToCome2){
+Pokimac :: Pokimac(string species2, string img2, string name2, string description2, int maxHealth2, int strength2, int defense2, int percentageToCome2){
 
       species = species2;
       img = img2;
       description = description2;
       maxHealth = maxHealth2;
-      healthPoint = healthPoint2;
+      healthPoint = maxHealth2;
       strength = strength2;
       defense = defense2;
       percentageToCome = percentageToCome2;
       isDead = false;
 
     }
+
+Pokimac :: Pokimac(){
+
+}    
 
 void Pokimac :: removeHealthPoints(int toRemove){
     

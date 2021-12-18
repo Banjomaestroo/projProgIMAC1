@@ -1,8 +1,8 @@
 #include <Player.h>
 
-Player :: Player(string name2){
+/*Player :: Player(string name2){
     name = name2;
-}
+}*/
 
 bool Player :: capturePokimac(Pokimac toCapture){
 

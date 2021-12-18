@@ -16,7 +16,7 @@ class Player {
     int yCoordinate;
     vector<InventoryObject> inventory;
 
-    Player(string name2);
+    //Player(string name2);
 
     bool capturePokimac(Pokimac toCapture);
     void addPokimac(Pokimac toAdd);

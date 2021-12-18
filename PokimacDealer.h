@@ -11,7 +11,8 @@ class PokimacDealer {
     string img;
     Pokimac collection[50];
 
-    void generatePokimacs();
+    PokimacDealer();
+
     Pokimac getPokimac(int id);
     
 };
