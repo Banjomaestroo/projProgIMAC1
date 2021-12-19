@@ -14,6 +14,7 @@ class Tile {
     int yCoordinate;
     Pokimac pokimac;
 
+    Tile();
     Tile(int rand);
     void addPokimac(Pokimac toAdd);
 

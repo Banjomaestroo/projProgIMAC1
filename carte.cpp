@@ -1,11 +1,19 @@
 #include "Carte.h"
+#include <chrono>
+#include <thread>
+
+Carte :: Carte(){
+
+	generatePokimacs();
+	generateTiles();
+}
 
 Tile Carte :: getCase(int x, int y){
 
 }
 
 void Carte :: setPlayerPos(int x, int y){
-    tiles[y][x].img = "P";
+    //tiles[y][x].img = "P";
 }
 
 void Carte :: generateTiles(){
@@ -13,8 +21,8 @@ void Carte :: generateTiles(){
     for(int i =0; i<height; i++){
 
         for(int y=0; y<height; y++){
-            int random = (rand()%3)+1;
-            tiles[i][y] = Tile(random);
+            int random = (rand()%2)+1;
+           // tiles[i][y] = Tile(random);
         }
     }
   
@@ -38,12 +46,12 @@ void Carte :: displayCarte(){
 		ConsoleUtils::setCursorPos(0, 0 + textOffset);
 		for (unsigned int j=0; j<height; j++) {
 			for (unsigned int i=0; i<width; i++) {
-				std::cout << tiles[j][i].img;
+			//	std::cout << tiles[j][i].img;
 			}
 			std::cout << std::endl;
 		}
 
-		ConsoleUtils::setCursorPos(pos.x, pos.y + textOffset);
+		/*ConsoleUtils::setCursorPos(pos.x, pos.y + textOffset);
 		std::cout << '@'; // Output '@' at my position
 
 		bool exitLoop = false;
@@ -72,15 +80,16 @@ void Carte :: displayCarte(){
 				ConsoleUtils::setCursorPos(pos.x, pos.y + textOffset);
 				std::cout << '@'; // Output '@' at my position
 			}
-        }
+        }*/
 }
 
 void Carte :: generatePokimacs(){
+
 	pokimac[0] = Pokimac("Soulakmeche", "soulakmeche","Oz", "Je crois que c'est un genre de prof, mais c'est à vérifier. Sa voix et son énergie dévastatrice m'ont traumatisé dès le premier jour",10,40,50,0);
 
 	pokimac[1] =Pokimac("Grobillzard", "grobizard","Gaga", "Qu'est ce le covid? Écoutez je ne pense pas qu'il y ait de bonnes ou de mauvaises folies",15,20,60,100);	
 
-	pokimac[2] = Pokimac("BouffeDuChou", "pika","Miam", "C'est un rat. Il me fait penser à quelqu'un ... En tou cas lui il est chou, et toi t'es moche.",10,25,20,70);	  
+	pokimac[2] = Pokimac("BouffeDuChou", "pika","Miam", "C'est un rat. Il me fait penser à quelqu'un ... En tout cas pikachu il est chou, et toi t'es moche.",10,25,20,70);	  
 
 	pokimac[3] = Pokimac("CaraMousse", "pouce","CaraPoucePlusFort", "Confiné, confiné, mais pas con fini. Du moins je crois pas, j'espere pas, du moins pas encore...",18,18,40,60);	  
 

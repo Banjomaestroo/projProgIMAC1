@@ -1,5 +1,7 @@
 #include "Tile.h"
 
+Tile :: Tile(){}
+
 Tile :: Tile(int rand){
     if(rand == 1){
         img = "T";

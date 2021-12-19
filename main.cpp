@@ -16,6 +16,7 @@ void initialize();
 void createPokimacs();
 
 Player thePlayer;
+Carte theCarte;
 
 
 int main(int argc, char *argv[]) {
@@ -28,7 +29,17 @@ void initialize(){
     cout << "Choose your username" << endl ;
     cin >> thePlayer.name;
     cout << thePlayer.name;
+
     thePlayer.displayPokimacs();
+    sleep(4);
     thePlayer.displayInventory();
+    sleep(4);
+    theCarte.displayCarte();
+}
+
+void sleep(int x){
+
+    std::this_thread::sleep_for(std::chrono::milliseconds(x));
+
 }
 

@@ -10,11 +10,12 @@ class Carte {
        
   public:           
     
-    Pokimac pokimac[10];
+    Pokimac pokimac[15];
     int height = 50;
     int width = 30;
-    Tile tiles[50][30];
+    //Tile tiles[50][30];
 
+    Carte();
     Tile getCase(int x, int y);
     void generateTiles();
     void displayCarte();
