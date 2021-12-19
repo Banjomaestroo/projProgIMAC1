@@ -17,23 +17,18 @@ void createPokimacs();
 
 Player thePlayer;
 
+
+int main(int argc, char *argv[]) {
+
+    initialize();
+}
+
 void initialize(){
 
     cout << "Choose your username" << endl ;
     cin >> thePlayer.name;
     cout << thePlayer.name;
-    thePlayer.PlayerI();
-    //thePlayer.displayPokimacs();
-    //thePlayer.displayInventory();
-
-
-
+    thePlayer.displayPokimacs();
+    thePlayer.displayInventory();
 }
 
-int main(int argc, char *argv[]) {
-
-    initialize();
-
-
-    
-}

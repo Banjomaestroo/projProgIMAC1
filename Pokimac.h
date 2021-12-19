@@ -31,5 +31,5 @@ class Pokimac {
     int attack();
     void feed();
     void setCoordinates(int a, int b);
-    void displayCaracteristics(); //
+    void displayCaracteristics(); 
 };

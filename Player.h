@@ -1,4 +1,3 @@
-#pragma once
 #include <iostream>
 #include <string>
 #include <vector>
@@ -17,7 +16,7 @@ class Player {
     int yCoordinate;
     vector<InventoryObject> inventory;
 
-    void PlayerI();
+    Player();
 
     bool capturePokimac(Pokimac toCapture);
     void addPokimac(Pokimac toAdd);

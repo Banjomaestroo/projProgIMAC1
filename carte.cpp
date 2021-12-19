@@ -73,5 +73,24 @@ void Carte :: displayCarte(){
 				std::cout << '@'; // Output '@' at my position
 			}
         }
-  
+}
+
+void Carte :: generatePokimacs(){
+	pokimac[0] = Pokimac("Soulakmeche", "soulakmeche","Oz", "Je crois que c'est un genre de prof, mais c'est à vérifier. Sa voix et son énergie dévastatrice m'ont traumatisé dès le premier jour",10,40,50,0);
+
+	pokimac[1] =Pokimac("Grobillzard", "grobizard","Gaga", "Qu'est ce le covid? Écoutez je ne pense pas qu'il y ait de bonnes ou de mauvaises folies",15,20,60,100);	
+
+	pokimac[2] = Pokimac("BouffeDuChou", "pika","Miam", "C'est un rat. Il me fait penser à quelqu'un ... En tou cas lui il est chou, et toi t'es moche.",10,25,20,70);	  
+
+	pokimac[3] = Pokimac("CaraMousse", "pouce","CaraPoucePlusFort", "Confiné, confiné, mais pas con fini. Du moins je crois pas, j'espere pas, du moins pas encore...",18,18,40,60);	  
+
+	pokimac[4] = Pokimac("Papicha", "papillon", "YonPiPa", "Je crois pas en ... non pour moi ça ne peut pas exister, mais après libre à vous d'avoir tort.",12,20,78,20);
+
+	pokimac[5] = Pokimac("GrasDouble", "doudou", "Grobese", "Moi aussi je suis à la recherche d'un doudou, veuillez laisser un cv à l'adresse suivante.", 40,80,20,10);
+
+	pokimac[6] = Pokimac("Cheum", "couincouin", "CouinSait", "Il se cache les yeux tellement tu es cheum.",20,50,22,90);
+
+	pokimac[7] = Pokimac("Moua", "moa", "MoaMoa","Je joue des mauvais tour. Heureusement que Steeve boit du cafe", 70,90,40,10);
+
+
 }

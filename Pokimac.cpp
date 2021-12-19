@@ -1,4 +1,4 @@
-#include <Pokimac.h>
+#include "Pokimac.h"
 
 Pokimac :: Pokimac(string species2, string img2, string name2, string description2, int maxHealth2, int strength2, int defense2, int percentageToCome2){
 

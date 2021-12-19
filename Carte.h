@@ -10,14 +10,15 @@ class Carte {
        
   public:           
     
-    Pokimac pokimac;
-    static const int height = 50;
-    static const int width = 35;
-    static Tile tiles[height][width];
+    Pokimac pokimac[10];
+    int height = 50;
+    int width = 30;
+    Tile tiles[50][30];
 
     Tile getCase(int x, int y);
     void generateTiles();
     void displayCarte();
     void setPlayerPos(int x, int y);
+    void generatePokimacs();
 
 };
