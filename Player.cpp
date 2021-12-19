@@ -1,8 +1,16 @@
-#include <Player.h>
+#include "Player.h"
 
 /*Player :: Player(string name2){
     name = name2;
 }*/
+
+void Player :: PlayerI(){
+
+    /*InventoryObject pokeball = InventoryObject("Pokeball", "Je sais pas à quoi ça sert, demerde toi", "pokeball", 5);
+    addObject(pokeball);
+    Pokimac startingPokimac = Pokimac("Soulakmeche", "soulak","Oz", "Je crois que c'est un genre de prof, mais c'est à vérifier. Sa voix et son énergie dévastatrice m'ont traumatisé dès le premier jour",10,40,50,0);
+    addPokimac(startingPokimac);*/
+}
 
 bool Player :: capturePokimac(Pokimac toCapture){
 

@@ -3,7 +3,7 @@
 Pokimac :: Pokimac(string species2, string img2, string name2, string description2, int maxHealth2, int strength2, int defense2, int percentageToCome2){
 
       species = species2;
-      img = img2;
+      img = AsciiGetter().getAscii(img2);
       description = description2;
       maxHealth = maxHealth2;
       healthPoint = maxHealth2;
@@ -50,7 +50,7 @@ void Pokimac :: feed(){
 
 void Pokimac :: displayCaracteristics(){
 
-    cout << endl << name << endl << img << endl << description << endl << species << endl;
+    cout << endl << name << endl << img << endl << description << endl << species << endl << "point de vie : "<< maxHealth<< endl<<"point d'attaques : "<<strength<<endl<< "point de défenses: "<<defense<<endl;
 
 }
 

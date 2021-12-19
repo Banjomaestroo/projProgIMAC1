@@ -18,7 +18,7 @@ CFLAGS=-Wall -ansi
 
 
 moncode: moncode.o mesfonctions.o
-	$(CC) -o $@ $^ -I include -L lib -l SDL2-2.0.0
+	$(CC) -o $@ $^ -I include -L lib -l SDL2
 	
 
 moncode.o: main.cpp InventoryObject.h Menu.h Player.h Pokimac.h Carte.h Tile.h PokimacDealer.h
@@ -29,6 +29,7 @@ mesfonctions.o: InventoryObject.h InventoryObject.cpp Menu.h Menu.cpp Player.h P
 
 clean:
 	rm -rf *.o
+	rm -rf moncode
 
 # mais en plus, on va effacer les fichiers .o
 

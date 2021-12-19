@@ -1,3 +1,4 @@
+#pragma once
 #include <iostream>
 #include <string>
 #include "Pokimac.h"
@@ -13,6 +14,7 @@ class Tile {
     int yCoordinate;
     Pokimac pokimac;
 
+    Tile(int rand);
     void addPokimac(Pokimac toAdd);
 
 };

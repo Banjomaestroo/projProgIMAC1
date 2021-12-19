@@ -1,5 +1,7 @@
+#pragma once
 #include <iostream>
 #include <string>
+#include "AsciiGetter.h"
 using namespace std;
 
 class Pokimac {     
@@ -19,7 +21,8 @@ class Pokimac {
     int percentageToCome;
     bool isDead;
 
-    Pokimac(string species2, string img2, string name2, string description2, int healthPoint2, int strength2, int defense2, int percentageToCome2);
+
+    Pokimac(string species2, string img2, string name2, string description2, int maxHealth2, int strength2, int defense2, int percentageToCome2);
 
     Pokimac();
 
