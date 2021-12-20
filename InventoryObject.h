@@ -1,6 +1,8 @@
+#pragma once
 #include <iostream>
 #include <string>
 #include "AsciiGetter.h"
+#include "consoleUtils.hpp"
 using namespace std;
 
 class InventoryObject {     

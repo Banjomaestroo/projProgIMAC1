@@ -76,11 +76,14 @@ void Player :: addObject(InventoryObject toAdd){
 
 void Player :: displayPokimacs(){
 
-    cout <<endl<<endl <<"---------------------VOS POKEMON---------------------"<<endl<<endl;
+    display.displayPokimacs(pokemonTeam);
+    
+    /*cout <<endl<<endl <<"---------------------VOS POKEMON---------------------"<<endl<<endl;
     for(vector<Pokimac>::iterator it = pokemonTeam.begin(); it != pokemonTeam.end(); ++it) {
-        (*it).displayCaracteristics();
-    }
+        (*it).displayCharacteristics();
+    }*/
 }
+
 
 Pokimac Player :: getPokimac(string name){
 
@@ -116,9 +119,10 @@ void Player :: removeObject(string name){
 
 void Player :: displayInventory(){
 
-    cout <<endl<<endl<< "---------------------CONTENU DE VOTRE INVENTAIRE---------------------"<<endl<<endl;
+    display.displayInventory(inventory);
+    /*cout <<endl<<endl<< "---------------------CONTENU DE VOTRE INVENTAIRE---------------------"<<endl<<endl;
     for(vector<InventoryObject>::iterator it = inventory.begin(); it != inventory.end(); ++it) {
         (*it).displayCharacteristics();
-    }
+    }*/
 
 }

@@ -4,9 +4,9 @@ Tile :: Tile(){}
 
 Tile :: Tile(int rand){
     if(rand == 1){
-        img = "T";
+        img = ".";
     }else if (rand == 2){
-        img = "B";
+        img = "*";
     }
 }
 void Tile :: addPokimac(Pokimac toAdd){

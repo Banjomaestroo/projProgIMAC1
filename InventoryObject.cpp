@@ -11,5 +11,6 @@ InventoryObject :: InventoryObject(string name2, string description2, string img
 
 void InventoryObject :: displayCharacteristics(){
 
+    ConsoleUtils::clear();
     cout << endl << name << endl << quantity << endl << description << endl << img << endl ;
 }

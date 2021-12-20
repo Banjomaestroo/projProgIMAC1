@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include "AsciiGetter.h"
+#include "consoleUtils.hpp"
 using namespace std;
 
 class Pokimac {     
@@ -31,5 +32,5 @@ class Pokimac {
     int attack();
     void feed();
     void setCoordinates(int a, int b);
-    void displayCaracteristics(); 
+    void displayCharacteristics(); 
 };

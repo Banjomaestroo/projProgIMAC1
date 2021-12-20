@@ -3,6 +3,7 @@
 #include <vector>
 #include "Pokimac.h"
 #include "InventoryObject.h"
+#include "Displayer.h"
 using namespace std;
 
 class Player {     
@@ -15,6 +16,7 @@ class Player {
     int xCoordinate;
     int yCoordinate;
     vector<InventoryObject> inventory;
+    Displayer display;
 
     Player();
 

@@ -17,6 +17,8 @@ void createPokimacs();
 
 Player thePlayer;
 Carte theCarte;
+AsciiGetter myGetter;
+Displayer display;
 
 
 int main(int argc, char *argv[]) {
@@ -26,15 +28,16 @@ int main(int argc, char *argv[]) {
 
 void initialize(){
 
-    cout << "Choose your username" << endl ;
-    cin >> thePlayer.name;
-    cout << thePlayer.name;
+    ConsoleUtils::clear();
+    cout << myGetter.getAscii("bienvenue");
+    ConsoleUtils::getChar();
 
-    thePlayer.displayPokimacs();
-    sleep(4);
-    thePlayer.displayInventory();
-    sleep(4);
-    theCarte.displayCarte();
+    ConsoleUtils::clear();
+    cout << myGetter.getAscii("guide");
+    ConsoleUtils::getChar();
+
+    display.displayPokimacs(theCarte.pokimac);
+
 }
 
 void sleep(int x){

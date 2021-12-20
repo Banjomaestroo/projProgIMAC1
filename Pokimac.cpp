@@ -1,5 +1,6 @@
 #include "Pokimac.h"
 
+
 Pokimac :: Pokimac(string species2, string img2, string name2, string description2, int maxHealth2, int strength2, int defense2, int percentageToCome2){
 
       species = species2;
@@ -48,8 +49,9 @@ void Pokimac :: feed(){
 
 }
 
-void Pokimac :: displayCaracteristics(){
+void Pokimac :: displayCharacteristics(){
 
+    ConsoleUtils::clear();
     cout << endl << name << endl << img << endl << description << endl << species << endl << "point de vie : "<< maxHealth<< endl<<"point d'attaques : "<<strength<<endl<< "point de défenses: "<<defense<<endl;
 
 }
