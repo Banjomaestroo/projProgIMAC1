@@ -1,6 +1,6 @@
 #include "Displayer.h"
 
-void Displayer :: displayPokimacs(vector<Pokimac> pokis, bool pokedex){
+void Displayer :: displayPokimacs(vector<Pokimac> pokis, bool pokedex, int* pointer){
     
     ConsoleUtils::clear();
     bool exitLoop = false;
@@ -35,7 +35,8 @@ void Displayer :: displayPokimacs(vector<Pokimac> pokis, bool pokedex){
                         index = size-1;
                         pokis.at(index).displayCharacteristics();
                         
-                    }break; 
+                    }cout<<endl<<endl<<"----  Utilisez les flêches pour naviguer dans cette liste de pokimacs----"<<endl<<endl <<"----Appuyez sur q pour quitter----"<<endl;
+                    break; 
 					case ConsoleUtils::KEY_RIGHT: 
                     ConsoleUtils::clear();
                     cout << pokedexString;
@@ -85,7 +86,8 @@ void Displayer :: displayInventory(vector<InventoryObject> objects){
                         index = size-1;
                         objects.at(index).displayCharacteristics();
                         
-                    }break; 
+                    }cout<<endl<<endl<<"----  Utilisez les flêches pour naviguer dans cette liste de pokimacs----"<<endl<<endl<<"----Appuyez sur q pour quitter----"<<endl;
+                    break; 
 					case ConsoleUtils::KEY_RIGHT: 
                     ConsoleUtils::clear();
                     cout << getter.getAscii("inventory");

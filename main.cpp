@@ -48,20 +48,25 @@ void sleep(int x){
 
 }
 
-void pokedex(){
+void pokedex(int* c){
 
-    display.displayPokimacs(theCarte.pokimac,true);
+    display.displayPokimacs(theCarte.pokimac,true,c);
 }
 
 void control(){
 
     bool exitLoop = false;
+    bool first = true;
+    int d;
+    int c;
+    
 		while (!exitLoop) {
-			int c = ConsoleUtils::getChar();
-            if(c == 'q'){
-                exitLoop = true;
-            }else if(c == 'g') displayMenu("guide");
-            else if(c == 'p') pokedex();
+            if(d==c || first) c = ConsoleUtils::getChar();
+            int d  = c;
+            int* p = &c;
+            if(c == 'q') exitLoop = true;
+            else if(c == 'g') displayMenu("guide");
+            else if(c == 'p') pokedex(p);
             else if(c == 'i') thePlayer.displayInventory();
             else theCarte.displayCarte();
         }

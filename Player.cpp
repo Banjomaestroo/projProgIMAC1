@@ -77,8 +77,8 @@ void Player :: addObject(InventoryObject toAdd){
 }
 
 void Player :: displayPokimacs(){
-
-    display.displayPokimacs(pokemonTeam,false);
+    int* l;
+    display.displayPokimacs(pokemonTeam,false, l);
     
     /*cout <<endl<<endl <<"---------------------VOS POKEMON---------------------"<<endl<<endl;
     for(vector<Pokimac>::iterator it = pokemonTeam.begin(); it != pokemonTeam.end(); ++it) {
