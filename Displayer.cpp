@@ -1,12 +1,69 @@
 #include "Displayer.h"
 
-void Displayer :: displayPokimacs(vector<Pokimac> pokis){
+void Displayer :: displayPokimacs(vector<Pokimac> pokis, bool pokedex){
     
     ConsoleUtils::clear();
     bool exitLoop = false;
     int index = 0;
     int size = pokis.size();
+    
+    string pokedexString = "";
+    if(pokedex)
+        pokedexString = getter.getAscii("pokedex");
+    cout << pokedexString;
     pokis.at(index).displayCharacteristics();
+    cout<<endl<<endl<<"----  Utilisez les flêches pour naviguer dans cette liste de pokimacs----"<<endl<<endl<<"----Appuyez sur q pour quitter----"<<endl;
+		while (!exitLoop) {
+
+			int c = ConsoleUtils::getChar();
+            
+			if(c == 'q') {
+
+                exitLoop = true;
+				
+			}else{
+
+                switch (c) {
+                    
+					case ConsoleUtils::KEY_LEFT: 
+                    ConsoleUtils::clear();
+                    cout << pokedexString;
+                    if(index>0){ 
+                        index--; 
+                        pokis.at(index).displayCharacteristics();
+                    }else{
+                        index = size-1;
+                        pokis.at(index).displayCharacteristics();
+                        
+                    }break; 
+					case ConsoleUtils::KEY_RIGHT: 
+                    ConsoleUtils::clear();
+                    cout << pokedexString;
+                    if(index<size-1){  
+                        index++; 
+                        pokis.at(index).displayCharacteristics();
+                    }else{
+                        index = 0;
+                        pokis.at(index).displayCharacteristics();
+                    };
+                    cout<<endl<<endl<<"----  Utilisez les flêches pour naviguer dans cette liste de pokimacs----"<<endl<<endl <<"----Appuyez sur q pour quitter----"<<endl;
+                    break;
+					default: break; 
+                }
+				 
+			}
+    }
+}
+
+void Displayer :: displayInventory(vector<InventoryObject> objects){
+    
+    ConsoleUtils::clear();
+    bool exitLoop = false;
+    int index = 0;
+    int size = objects.size();
+    cout << getter.getAscii("inventory");
+    objects.at(index).displayCharacteristics();
+    cout<<endl<<endl<<"----  Utilisez les flêches pour naviguer dans cette liste de pokimacs----"<<endl<<endl<<"----Appuyez sur q pour quitter----"<<endl;
 		while (!exitLoop) {
 
 			int c = ConsoleUtils::getChar();
@@ -20,65 +77,26 @@ void Displayer :: displayPokimacs(vector<Pokimac> pokis){
                 switch (c) {
 					case ConsoleUtils::KEY_LEFT: 
                     ConsoleUtils::clear();
+                    cout << getter.getAscii("inventory");
                     if(index>0){ 
-                        //cout << "hmmmm";
                         index--; 
-                        pokis.at(index).displayCharacteristics();
+                        objects.at(index).displayCharacteristics();
                     }else{
-                        //cout << "hmmmm";
                         index = size-1;
-                        pokis.at(index).displayCharacteristics();
+                        objects.at(index).displayCharacteristics();
                         
                     }break; 
 					case ConsoleUtils::KEY_RIGHT: 
                     ConsoleUtils::clear();
+                    cout << getter.getAscii("inventory");
                     if(index<size-1){  
                         index++; 
-                        pokis.at(index).displayCharacteristics();
-                    }else{
-                        index = 0;
-                        pokis.at(index).displayCharacteristics();
-                    };
-                    cout<<endl<<"----  Utilisez les flêches pour naviguer dans cette liste de pokimacs----"<<endl<<"----Appuyez sur q pour quitter----"<<endl<<index<<endl<<size<<endl;
-                    break;
-					default: break; 
-                }
-				 
-			}
-    }
-}
-
-void Displayer :: displayInventory(vector<InventoryObject> objects){
-    
-    bool exitLoop = false;
-    int index = 0;
-    int size = objects.size();
-		while (!exitLoop) {
-
-			int c = ConsoleUtils::getChar();
-			if(c == 'q') {
-
-                exitLoop = true;
-				
-			}else{
-
-                switch (c) {
-					case ConsoleUtils::KEY_LEFT: if(index<size){ 
-                        index++; 
                         objects.at(index).displayCharacteristics();
                     }else{
                         index = 0;
                         objects.at(index).displayCharacteristics();
-                        
-                    } 
-					case ConsoleUtils::KEY_RIGHT: if(index>0){  
-                        index++; 
-                        objects.at(index).displayCharacteristics();
-                    }else{
-                        index = size-1;
-                        objects.at(index).displayCharacteristics();
                     };
-                    cout<<endl<<"----  Utilisez les flêches pour naviguer dans cette liste de pokimacs----"<<endl<<"----Appuyez sur q pour quitter----";
+                    cout<<endl<<endl<<"----  Utilisez les flêches pour naviguer dans cette liste de pokimacs----"<<endl<<endl<<"----Appuyez sur q pour quitter----"<<endl;
                     break;
 					default: break; 
                 }

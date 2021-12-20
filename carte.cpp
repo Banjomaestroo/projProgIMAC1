@@ -101,5 +101,9 @@ void Carte :: generatePokimacs(){
 
 	pokimac.push_back( Pokimac("Moua", "moa", "MoaMoa","Je joue des mauvais tour. Heureusement que Steeve boit du cafe", 70,90,40,10));
 
+	pokimac.push_back( Pokimac("Vava", "vapor", "FéCho", "Vive le réchauffement climatique, dans ta face Greta", 35, 70, 30,10));
+
+	pokimac.push_back(Pokimac("LampeTarace", "lampras", "RaceTaLampe", "Un animal de mer une loutre, un phoque, je ne sais pas, t as qu'a lui demander",40,70,50,5));
+
 
 }

@@ -11,6 +11,5 @@ InventoryObject :: InventoryObject(string name2, string description2, string img
 
 void InventoryObject :: displayCharacteristics(){
 
-    ConsoleUtils::clear();
-    cout << endl << name << endl << quantity << endl << description << endl << img << endl ;
+    cout << endl << "Nom : "<< name << endl<<endl<< "Quantité dans votre inventaire : " << quantity << endl<<endl << "Description : " << description << endl<<endl << img << endl ;
 }

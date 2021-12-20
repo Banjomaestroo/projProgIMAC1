@@ -3,6 +3,7 @@
         "*html": "html",
         "*njk": "html",
         "string": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "iostream": "cpp"
     }
 }

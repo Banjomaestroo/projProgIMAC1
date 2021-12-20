@@ -1,8 +1,5 @@
 #include <iostream>
 #include <string>
-#include <SDL2/SDL.h>
-#include <SDL2/SDL_image.h>
-#include <SDL2/SDL_timer.h>
 #include "Player.h"
 #include "Menu.h"
 #include "Carte.h"
@@ -14,6 +11,9 @@ bool correctInput(string input);
 void displayMapLimit(string direction);
 void initialize();
 void createPokimacs();
+void pokedex();
+void control();
+void displayMenu(string name);
 
 Player thePlayer;
 Carte theCarte;
@@ -27,17 +27,19 @@ int main(int argc, char *argv[]) {
 }
 
 void initialize(){
+    
+    displayMenu("bienvenue");
+    displayMenu("guide");
+
+    control();
+
+}
+
+void displayMenu(string name){
 
     ConsoleUtils::clear();
-    cout << myGetter.getAscii("bienvenue");
+    cout << myGetter.getAscii(name);
     ConsoleUtils::getChar();
-
-    ConsoleUtils::clear();
-    cout << myGetter.getAscii("guide");
-    ConsoleUtils::getChar();
-
-    display.displayPokimacs(theCarte.pokimac);
-
 }
 
 void sleep(int x){
@@ -46,3 +48,22 @@ void sleep(int x){
 
 }
 
+void pokedex(){
+
+    display.displayPokimacs(theCarte.pokimac,true);
+}
+
+void control(){
+
+    bool exitLoop = false;
+		while (!exitLoop) {
+			int c = ConsoleUtils::getChar();
+            if(c == 'q'){
+                exitLoop = true;
+            }else if(c == 'g') displayMenu("guide");
+            else if(c == 'p') pokedex();
+            else if(c == 'i') thePlayer.displayInventory();
+            else theCarte.displayCarte();
+        }
+
+}
