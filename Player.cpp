@@ -10,7 +10,7 @@ Player :: Player(){
     addObject(pokeball);
     InventoryObject pokiWeed = InventoryObject("Herbe à pokemon", "C'est de la Marie Jane je crois, ca ne se fume pas ca se mange, meme si ca fait du bien", "weed", 3);
     addObject(pokiWeed);
-    Pokimac startingPokimac = Pokimac("Soulakmeche", "soulakmeche","Oz", "Je crois que c'est un genre de prof, mais c'est à vérifier. Sa voix et son énergie dévastatrice m'ont traumatisé dès le premier jour",10,40,50,0);
+    Pokimac startingPokimac = Pokimac("Soulakmeche", "soulakmeche","Oz", "Je crois que c'est un genre de prof, mais c'est à vérifier. Sa voix et son énergie dévastatrice m'ont traumatisé dès le premier jour",10,40,50,0,"fire");
     addPokimac(startingPokimac);
 }
 

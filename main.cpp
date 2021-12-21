@@ -28,18 +28,12 @@ int main(int argc, char *argv[]) {
 
 void initialize(){
     
-    displayMenu("bienvenue");
-    displayMenu("guide");
+    display.displayMenu("bienvenue");
+    ConsoleUtils::getChar();
+    display.displayMenu("guide");
 
     control();
 
-}
-
-void displayMenu(string name){
-
-    ConsoleUtils::clear();
-    cout << myGetter.getAscii(name);
-    ConsoleUtils::getChar();
 }
 
 void sleep(int x){
@@ -65,7 +59,7 @@ void control(){
             int d  = c;
             int* p = &c;
             if(c == 'q') exitLoop = true;
-            else if(c == 'g') displayMenu("guide");
+            else if(c == 'g') display.displayMenu("guide");
             else if(c == 'p') pokedex(p);
             else if(c == 'i') thePlayer.displayInventory();
             else theCarte.displayCarte();

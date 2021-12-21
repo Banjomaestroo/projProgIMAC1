@@ -17,9 +17,11 @@ void Displayer :: displayPokimacs(vector<Pokimac> pokis, bool pokedex, int* poin
 
 			int c = ConsoleUtils::getChar();
             
+            
 			if(c == 'q') {
 
                 exitLoop = true;
+                displayMenu("guide");
 				
 			}else{
 
@@ -72,6 +74,7 @@ void Displayer :: displayInventory(vector<InventoryObject> objects){
 			if(c == 'q') {
 
                 exitLoop = true;
+                displayMenu("guide");
 				
 			}else{
 
@@ -106,3 +109,11 @@ void Displayer :: displayInventory(vector<InventoryObject> objects){
 			}
     }
 }
+
+void Displayer :: displayMenu(string name){
+
+    ConsoleUtils::clear();
+    cout << getter.getAscii(name);
+    //ConsoleUtils::getChar();
+}
+

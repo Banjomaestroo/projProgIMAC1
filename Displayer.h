@@ -11,6 +11,7 @@ class Displayer {
        
   public:           
     AsciiGetter getter;
+    void displayMenu(string name);
     void displayPokimacs(vector<Pokimac> myPokis, bool pokedex, int* pointer);
     void displayInventory(vector<InventoryObject> myObjects);
 

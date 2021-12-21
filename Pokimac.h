@@ -3,6 +3,7 @@
 #include <string>
 #include "AsciiGetter.h"
 #include "consoleUtils.hpp"
+#include "Type.h"
 using namespace std;
 
 class Pokimac {     
@@ -21,9 +22,10 @@ class Pokimac {
     int yCoordinate;
     int percentageToCome;
     bool isDead;
+    Type type;
 
 
-    Pokimac(string species2, string img2, string name2, string description2, int maxHealth2, int strength2, int defense2, int percentageToCome2);
+    Pokimac(string species2, string img2, string name2, string description2, int maxHealth2, int strength2, int defense2, int percentageToCome2, string type2);
 
     Pokimac();
 

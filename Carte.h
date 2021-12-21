@@ -5,6 +5,7 @@
 #include "Pokimac.h"
 #include "Tile.h"
 #include "consoleUtils.hpp"
+#include "Displayer.h"
 using namespace std;
 
 class Carte {     
@@ -15,6 +16,7 @@ class Carte {
     int height = 30;
     int width = 40;
     Tile tiles[30][40];
+    Displayer display;
 
     Carte();
     Tile getCase(int x, int y);

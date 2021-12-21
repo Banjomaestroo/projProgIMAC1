@@ -17,7 +17,7 @@ CFLAGS=-Wall -ansi
 
 
 
-moncode: main.cpp InventoryObject.cpp Player.cpp Pokimac.cpp Carte.cpp Tile.cpp AsciiGetter.cpp Displayer.cpp 
+moncode: main.cpp InventoryObject.cpp Player.cpp Pokimac.cpp Carte.cpp Tile.cpp AsciiGetter.cpp Displayer.cpp Type.cpp
 	$(CC) -o $@ $^ -w
 	
 moncode.o: main.cpp InventoryObject.h Menu.h Player.h Pokimac.h Carte.h Tile.h PokimacDealer.h AsciiGetter.h
